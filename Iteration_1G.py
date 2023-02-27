@@ -1,7 +1,13 @@
-import requests
-import sys
-import json
 
+# first we will import the modules that are required for the VEP API
+import requests
+import json
+import sys
+
+
+
+#the base URL to acess the ensembl REST_API, The REST API allows users to
+# programmatically retrieve data from the Ensembl database using HTTP requests
 server = "https://rest.ensembl.org"
 
 # Prompt the user to enter the variant ID
@@ -11,7 +17,8 @@ variant_id = input("Enter the variant ID (e.g. ENST00000316673:c.281_282delinsC)
 ext = f"/vep/human/hgvs/{variant_id}"
 url = server + ext
 
-# Call the Ensembl VEP API to retrieve the variant effect data
+# Call the Ensembl VEP API to retrieve the variant effect data and the return in json
+
 headers = {"Content-Type": "application/json"}
 response = requests.get(url, headers=headers)
 
