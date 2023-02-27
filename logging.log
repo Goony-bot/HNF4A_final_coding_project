@@ -1,0 +1,4 @@
+2023-02-27 20:54:33,916: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-02-27 20:54:34,694: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/0316673:c.281_282 HTTP/1.1" 400 110
+2023-02-27 20:54:34,700: ERROR: : 400 Client Error: Bad Request for url: https://rest.ensembl.org/vep/human/hgvs/0316673:c.281_282
+Request URL : https://rest.ensembl.org/vep/human/hgvs/0316673:c.281_282

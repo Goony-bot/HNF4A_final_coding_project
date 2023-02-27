@@ -32,3 +32,5 @@ decoded = response.json()
 decoded_dict = json.loads(json.dumps(decoded, indent=4))
 
 print(json.dumps((decoded), indent=4))
+
+
