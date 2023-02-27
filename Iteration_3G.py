@@ -28,6 +28,7 @@ try:
     response.raise_for_status() # raise an exception if the response is not OK
 except requests.exceptions.RequestException as e:
     print(f"Error: {e}")
+    print (f"Please click on the link about to view the error that occurred")
     sys.exit()
 except requests.exceptions.Timeout: #rasie an exception if the request times out before receiving a response from the server
     print("Error: Request timed out")
