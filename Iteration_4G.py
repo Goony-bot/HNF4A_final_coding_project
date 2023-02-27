@@ -52,4 +52,40 @@ while True:
 decoded = response.json()
 decoded_dict = json.loads(json.dumps(decoded, indent=4))
 
-print(json.dumps((decoded), indent=4))
+#print(json.dumps((decoded), indent=4))
+
+# from the VEP output, we need to get the 'most_severe_consequence' value.
+# to access the dictionary:
+dict = decoded[0]
+# define also the key of interest...
+key1 = 'most_severe_consequence'
+
+# and the corresponding values of interest
+frameshift = 'frameshift_variant'
+nonsense = 'stop_gained'
+
+# Boolean included for loop purpose
+match_found = False
+
+# we write a loop to determine if the variants of interest are specified as the most severe consequence.
+
+for key, value in dict.items():
+    #define the key
+    if key == key1:
+        # if the variant is frameshift or nonsense, a message is printed out indicating so.
+        if value == frameshift or value == nonsense:
+            match_found = True
+            print('Variant type: ' + value)
+            break
+
+# I have yet to determine the best way to print a statement when it's not nonsense or frameshift.
+
+#if it's any other variant type, this message is printed.
+    #else:
+        #print('This is not a nonsense or frameshift variant.')
+
+
+    #if not match_found:
+       # print('This is not a nonsense or frameshift variant.')
+
+
