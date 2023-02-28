@@ -14,6 +14,7 @@ class Conseq:
 
         try:
             response = requests.get(server + endpoint, headers=headers)
+
             response.raise_for_status()  # raise an exception if the response is not OK
         except requests.exceptions.Timeout:
             logging.error('Request timed out')
@@ -29,6 +30,7 @@ class Conseq:
             raise requests.exceptions.RequestException(f'Request error: {e}')
 
         data = response.json()
+        decoded_data = json.loads(json.dumps(data, indent=4 ))
         if not data:  # empty list or dictionary returned by API
             logging.warning('No data returned by API')
             return None
@@ -40,16 +42,22 @@ class Conseq:
         return most_severe_consequence
 
 
-variant_id = input("Enter the variant ID in HGVS format: ")
-conseq = Conseq()
+is_complete = False
 
-try:
-    most_severe_consequence = conseq.get_most_severe_consequence(variant_id)
-    if most_severe_consequence:
-        logging.info(f'Most severe consequence: {most_severe_consequence}')
-        print(f"This variant leads to: {most_severe_consequence}")
-    else:
-        print("No most severe consequence found for the given variant ID")
-except Exception as e:
-    logging.error(f"Error occurred: {e}")
-    print(f"Error occurred: {e}")
+
+while not is_complete:
+    variant_id = input("Enter the variant ID in HGVS format: ")
+    conseq = Conseq()
+
+    try:
+        most_severe_consequence = conseq.get_most_severe_consequence(variant_id)
+        if most_severe_consequence:
+            logging.info(f'Most severe consequence: {most_severe_consequence}')
+            print(f"This variant leads to: {most_severe_consequence}")
+            is_complete = True
+        else:
+            print("No most severe consequence found for the given variant ID")
+    except Exception as e:
+        logging.error(f"Error occurred: {e}")
+        print(f"Error occurred: {e}")
+

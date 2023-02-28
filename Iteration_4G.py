@@ -22,29 +22,31 @@ url = server + ext
 headers = {"Content-Type": "application/json"}
 
 # Check if the response was successful, error handleing and exceptions
-try:
-    response = requests.get(url, headers=headers)
-    response.raise_for_status()  # raise an exception if the response is not OK
-except requests.exceptions.Timeout:  # raise an exception if the request times out before receiving a response from
-    # the server
-    logging.error('Request timed out')  # here i am logging the exception errors
-    print("Error: Request timed out")
-except requests.exceptions.ConnectionError:  # raise an exception if the request cannot be sent due to a network
-    # connectivity issue, such as a DNS resolution failure or a refused connection
-    logging.error('Could not connect to the server')  # here i am logging the exception errors
-    print("Error: Could not connect to the server")
-except requests.exceptions.TooManyRedirects:  # raise an exception if the request exceeds the maximum number of
-    # allowed redirects
-    logging.error('Too many redirects')  # here i am logging the exception errors
-    print("Error: Too many redirects")
-except requests.exceptions.RequestException as e:  # raise all other exceptions (i have put the specifc exceptions
-    # first)
 
-    error_message = f": {e}\nRequest URL : {url}"
-    print(
-        "check that you have entered the correct variant, click the link to view detailed error message " + error_message)
-    print("only HGVS is accepted eg.ENST00000316673:c.281_282delinsC  ")
-    logging.error(error_message)
+while True:
+    try:
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()  # raise an exception if the response is not OK
+    except requests.exceptions.Timeout:  # raise an exception if the request times out before receiving a response from
+        # the server
+        logging.error('Request timed out')  # here i am logging the exception errors
+        print("Error: Request timed out")
+    except requests.exceptions.ConnectionError:  # raise an exception if the request cannot be sent due to a network
+        # connectivity issue, such as a DNS resolution failure or a refused connection
+        logging.error('Could not connect to the server')  # here i am logging the exception errors
+        print("Error: Could not connect to the server")
+    except requests.exceptions.TooManyRedirects:  # raise an exception if the request exceeds the maximum number of
+        # allowed redirects
+        logging.error('Too many redirects')  # here i am logging the exception errors
+        print("Error: Too many redirects")
+    except requests.exceptions.RequestException as e:  # raise all other exceptions (i have put the specifc exceptions
+        # first)
+
+        error_message = f": {e}\nRequest URL : {url}"
+        print(
+            "check that you have entered the correct variant, click the link to view detailed error message " + error_message)
+        print("only HGVS is accepted eg.ENST00000316673:c.281_282delinsC  ")
+        logging.error(error_message)
 
 # Parse the JSON response and save it in a dictionary
 decoded = response.json()

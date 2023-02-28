@@ -16,3 +16,17 @@ Request URL : https://rest.ensembl.org/vep/human/hgvs/0316673:c.281_282
 2023-02-28 11:30:33,798: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
 2023-02-28 11:30:36,693: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/ENST00000316673:c.281_282delinsC HTTP/1.1" 200 8019
 2023-02-28 11:30:36,699: INFO: Most severe consequence: frameshift_variant
+2023-02-28 12:33:21,403: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-02-28 12:33:22,788: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/ENST00000316673:c.281_282delinsC HTTP/1.1" 200 8019
+2023-02-28 12:33:22,793: INFO: Most severe consequence: frameshift_variant
+2023-02-28 14:43:29,463: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-02-28 14:43:30,100: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/qh%20qygeyueg HTTP/1.1" 400 100
+2023-02-28 14:43:30,104: ERROR: Request error: 400 Client Error: Bad Request for url: https://rest.ensembl.org/vep/human/hgvs/qh%20qygeyueg
+2023-02-28 14:43:30,105: ERROR: Error occurred: Request error: 400 Client Error: Bad Request for url: https://rest.ensembl.org/vep/human/hgvs/qh%20qygeyueg
+2023-02-28 14:47:19,248: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-02-28 14:47:19,822: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/weqe HTTP/1.1" 400 88
+2023-02-28 14:47:19,827: ERROR: Request error: 400 Client Error: Bad Request for url: https://rest.ensembl.org/vep/human/hgvs/weqe
+2023-02-28 14:47:19,827: ERROR: Error occurred: Request error: 400 Client Error: Bad Request for url: https://rest.ensembl.org/vep/human/hgvs/weqe
+2023-02-28 14:47:42,153: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-02-28 14:47:43,822: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/ENST00000316673:c.281_282delinsC HTTP/1.1" 200 8019
+2023-02-28 14:47:43,830: INFO: Most severe consequence: frameshift_variant
