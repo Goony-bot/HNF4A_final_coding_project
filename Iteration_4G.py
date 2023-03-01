@@ -48,7 +48,7 @@ decoded_dict = json.loads(json.dumps(decoded, indent=4))
 
 # from the VEP output, we need to get the 'most_severe_consequence' value.
 # to access the dictionary:
-dict = decoded[0]
+my_dict = decoded[0]
 # define also the key of interest...
 key1 = 'most_severe_consequence'
 
@@ -61,7 +61,7 @@ match_found = False
 
 # we write a loop to determine if the variants of interest are specified as the most severe consequence.
 
-for key, value in dict.items():
+for key, value in my_dict.items():
     #define the key
     if key == key1:
         # if the variant is frameshift or nonsense, a message is printed out indicating so.
@@ -73,6 +73,54 @@ for key, value in dict.items():
         else:
             print('This is not a nonsense or frameshift variant.')
 
+# for nonsense and frameshift variants, we need to find out where the premature termination occurs...
 
+# this step uses VV rest-api
+server_vv = "https://rest.variantvalidator.org/VariantValidator/variantvalidator/hg38/"
+ext3 = "/refseq_select"
+url_vv = server_vv + variant_id + ext3
+
+try:
+    response2 = requests.get(url_vv)
+    response2.raise_for_status()  # raise an exception if the response is not OK
+except requests.exceptions.Timeout:  # rasie an exception if the request times out before receiving a response from the server
+    print("Error: Request timed out")
+
+    sys.exit()
+
+# Parse the JSON response and save it in a dictionary
+decoded2 = response2.json()
+decoded2_dict = json.loads(json.dumps(decoded, indent=4))
+
+
+# print(json.dumps((decoded2), indent=4))
+
+#to get the exon at which the variant occurs.
+def get_start_exon(d, pattern):
+    for key, value in d.items():
+        if isinstance(value, dict):
+            result = get_start_exon(value, pattern)
+            if result is not None:
+                return result
+        elif key == pattern:
+            return value
+
+
+start_exon = get_start_exon(decoded2, 'start_exon')
+print("The variant causes a premature termination at exon: " + start_exon)
+
+#we are interested in variants occuring at exons 1-9...
+#exon no. needs to be converted from str to int
+
+start_exon_int = int(start_exon)
+
+#function to check if exon 1-9 criteria satisfied.
+def func_pvs1(start_exon_int):
+    if start_exon_int < 10:
+        print("This variant satisfies PVS1 at a very strong level.")
+
+pvs1_outcome = func_pvs1(start_exon_int)
+
+# next step is to filter variants occuring in exon 10.
 
 
