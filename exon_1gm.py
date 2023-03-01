@@ -12,7 +12,8 @@ server = "https://rest.ensembl.org"
 variant_id = input("Enter the variant ID (e.g. ENST00000316673:c.281_282delinsC): ")
 
 # Build the API request URL
-ext = f"/vep/human/hgvs/{variant_id}"
+# added optional parameters to indicate canonical transcript flag, and exons affected
+ext = f"/vep/human/hgvs/{variant_id}/canonical=1/numbers=1"
 url = server + ext
 
 # Call the Ensembl VEP API to retrieve the variant effect data and the return in json
@@ -31,7 +32,7 @@ except requests.exceptions.ConnectionError:  # raise an exception if the request
 except requests.exceptions.TooManyRedirects:  # rasie an exception if the request exceeds the maximum number of allowed redirects
     print("Error: Too many redirects")
     sys.exit()
-except requests.exceptions.RequestException as e: # raise all other exceptions , i have put the specifc exceptions first
+except requests.exceptions.RequestException as e:  # raise all other exceptions , i have put the specifc exceptions first
     error_message = f": {e}\nRequest URL : {url}"
     print(
         "check that you have entered the correct varaint, click the link to view detailed error message " + error_message)
@@ -43,7 +44,7 @@ except requests.exceptions.RequestException as e: # raise all other exceptions ,
 decoded = response.json()
 decoded_dict = json.loads(json.dumps(decoded, indent=4))
 
-#print(json.dumps((decoded), indent=4))
+# print(json.dumps((decoded), indent=4))
 
 
 # from the VEP output, we need to get the 'most_severe_consequence' value.
@@ -62,14 +63,14 @@ match_found = False
 # we write a loop to determine if the variants of interest are specified as the most severe consequence.
 
 for key, value in my_dict.items():
-    #define the key
+    # define the key
     if key == key1:
         # if the variant is frameshift or nonsense, a message is printed out indicating so.
         if value == frameshift or value == nonsense:
             match_found = True
             print('Variant type: ' + value)
             break
-#if it's any other variant type, this message is printed.
+        # if it's any other variant type, this message is printed.
         else:
             print('This is not a nonsense or frameshift variant.')
 
@@ -122,5 +123,3 @@ def func_pvs1(start_exon_int):
 pvs1_outcome = func_pvs1(start_exon_int)
 
 # next step is to filter variants occuring in exon 10.
-
-
