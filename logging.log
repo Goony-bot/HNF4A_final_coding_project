@@ -372,3 +372,205 @@ Request URL : https://rest.ensembl.org/vep/human/hgvs/0316673:c.281_282
 2023-03-03 16:05:08,810: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
 2023-03-03 16:05:10,298: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NC_000020.11:g.44355852C%3EA HTTP/1.1" 200 3189
 2023-03-03 16:05:10,302: INFO: Most severe consequence: stop_gained
+2023-03-01 23:11:37,057: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-01 23:11:39,627: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5(HNF4A):c.48C%3EA%20(p.Tyr16Ter) HTTP/1.1" 200 3213
+2023-03-01 23:11:39,631: INFO: Most severe consequence: stop_gained
+2023-03-02 12:27:40,517: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 12:27:43,437: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5(HNF4A):c.48C%3EA%20(p.Tyr16Ter)?canonical=1;numbers=1; HTTP/1.1" 200 3309
+2023-03-02 12:27:43,441: INFO: Most severe consequence: stop_gained
+2023-03-02 13:25:42,292: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 13:25:44,715: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5(HNF4A):c.48C%3EA%20(p.Tyr16Ter)?canonical=1;numbers=1; HTTP/1.1" 200 3309
+2023-03-02 14:35:04,882: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 14:35:05,451: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/NM_175914.5(HNF4A):c.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 404 106
+2023-03-02 14:35:05,454: ERROR: Request error: 404 Client Error: Not Found for url: https://rest.ensembl.org/vep/human/NM_175914.5(HNF4A):c.48C%3EA?canonical=1;numbers=1;content-type=application/json
+2023-03-02 14:43:43,829: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 14:43:44,146: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/NM_175914.5:c.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 404 106
+2023-03-02 14:43:44,149: ERROR: Request error: 404 Client Error: Not Found for url: https://rest.ensembl.org/vep/human/NM_175914.5:c.48C%3EA?canonical=1;numbers=1;content-type=application/json
+2023-03-02 14:52:21,346: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 14:52:21,674: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/NM_175914.5:c.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 404 106
+2023-03-02 14:52:21,677: ERROR: Request error: 404 Client Error: Not Found for url: https://rest.ensembl.org/vep/human/NM_175914.5:c.48C%3EA?canonical=1;numbers=1;content-type=application/json
+2023-03-02 14:53:50,717: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 14:53:50,995: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/NM_175914.5(HNF4A):c.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 404 106
+2023-03-02 14:53:51,000: ERROR: Request error: 404 Client Error: Not Found for url: https://rest.ensembl.org/vep/human/NM_175914.5(HNF4A):c.48C%3EA?canonical=1;numbers=1;content-type=application/json
+2023-03-02 14:54:32,514: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 14:54:32,833: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 404 106
+2023-03-02 14:54:32,837: ERROR: Request error: 404 Client Error: Not Found for url: https://rest.ensembl.org/vep/human/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json
+2023-03-02 14:59:42,212: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 14:59:42,534: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/import%20requests?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 404 106
+2023-03-02 14:59:42,553: ERROR: Request error: 404 Client Error: Not Found for url: https://rest.ensembl.org/vep/human/import%20requests?canonical=1;numbers=1;content-type=application/json
+2023-03-02 15:00:08,504: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 15:00:08,848: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 404 106
+2023-03-02 15:00:08,851: ERROR: Request error: 404 Client Error: Not Found for url: https://rest.ensembl.org/vep/human/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json
+2023-03-02 15:03:41,825: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 15:03:42,209: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/Traceback%20%28most%20recent%20call%20last%29%3A?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 404 106
+2023-03-02 15:03:42,212: ERROR: Request error: 404 Client Error: Not Found for url: https://rest.ensembl.org/vep/human/Traceback%20%28most%20recent%20call%20last%29%3A?canonical=1;numbers=1;content-type=application/json
+2023-03-02 15:03:55,497: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 15:03:55,777: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 404 106
+2023-03-02 15:03:55,780: ERROR: Request error: 404 Client Error: Not Found for url: https://rest.ensembl.org/vep/human/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json
+2023-03-02 15:07:30,785: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 15:07:31,124: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 404 106
+2023-03-02 15:07:31,127: ERROR: Request error: 404 Client Error: Not Found for url: https://rest.ensembl.org/vep/human/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json
+2023-03-02 15:08:37,669: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 15:08:38,012: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/NM_175914.5%28HNF4A%29%3Ac.48C%3EA%20%28p.Tyr16Ter%29?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 404 106
+2023-03-02 15:08:38,014: ERROR: Request error: 404 Client Error: Not Found for url: https://rest.ensembl.org/vep/human/NM_175914.5%28HNF4A%29%3Ac.48C%3EA%20%28p.Tyr16Ter%29?canonical=1;numbers=1;content-type=application/json
+2023-03-02 15:11:12,242: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 15:11:12,540: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/NM_175914.5:c.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 404 106
+2023-03-02 15:11:12,543: ERROR: Request error: 404 Client Error: Not Found for url: https://rest.ensembl.org/vep/human/NM_175914.5:c.48C%3EA?canonical=1;numbers=1;content-type=application/json
+2023-03-02 15:12:11,069: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 15:12:12,760: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 15:13:22,081: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 15:13:23,307: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 15:14:14,734: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 15:14:15,844: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 15:17:33,563: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 15:17:34,866: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 15:23:09,645: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 15:23:11,067: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 15:23:39,515: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 15:23:42,487: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 15:24:46,060: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 15:24:47,116: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 15:38:15,775: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 15:38:17,397: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 15:40:44,714: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 15:40:46,362: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 15:41:26,690: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 15:41:28,315: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 15:45:47,381: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 15:45:48,754: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 15:46:51,737: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 15:46:54,704: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 16:28:28,346: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 16:28:30,737: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 16:35:00,853: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 16:35:03,245: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 16:44:18,536: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 16:44:20,797: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 16:45:04,396: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 16:45:05,333: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 16:45:52,889: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 16:45:54,969: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 16:52:32,735: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 16:52:33,507: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/TypeError%3A%20string%20indices%20must%20be%20integers?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 400 154
+2023-03-02 16:52:33,512: ERROR: Request error: 400 Client Error: Bad Request for url: https://rest.ensembl.org/vep/human/hgvs/TypeError%3A%20string%20indices%20must%20be%20integers?canonical=1;numbers=1;content-type=application/json
+2023-03-02 16:52:54,355: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 16:52:55,469: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 16:53:36,336: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 16:53:37,989: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 17:01:16,310: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 17:01:17,425: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 17:03:13,013: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 17:03:16,454: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 17:05:57,525: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 17:05:58,954: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 17:08:44,342: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 17:08:47,117: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 17:32:03,045: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 17:32:04,175: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/filtered_transcripts%20%3D%20%5B%5D?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 400 67
+2023-03-02 17:32:04,177: ERROR: Request error: 400 Client Error: Bad Request for url: https://rest.ensembl.org/vep/human/hgvs/filtered_transcripts%20%3D%20%5B%5D?canonical=1;numbers=1;content-type=application/json
+2023-03-02 17:32:17,551: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 17:32:21,064: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 17:40:46,408: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 17:40:48,369: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 17:42:16,216: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 17:42:17,582: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 17:43:55,376: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 17:43:57,110: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 17:47:26,646: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 17:47:30,364: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 17:52:05,501: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 17:52:06,259: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/%20%20%20%20%20%20%20%20for%20d%20in%20relevant_dict%3A?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 400 120
+2023-03-02 17:52:06,262: ERROR: Request error: 400 Client Error: Bad Request for url: https://rest.ensembl.org/vep/human/hgvs/%20%20%20%20%20%20%20%20for%20d%20in%20relevant_dict%3A?canonical=1;numbers=1;content-type=application/json
+2023-03-02 17:52:18,758: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 17:52:20,494: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 17:53:06,410: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 17:53:08,676: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 17:54:43,956: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 17:54:45,328: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 18:18:38,334: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 18:18:41,252: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 18:18:59,257: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 18:19:01,308: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 18:25:02,393: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 18:25:04,134: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 18:48:34,070: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 18:48:36,235: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 18:49:32,263: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 18:49:33,320: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 18:50:05,244: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 18:50:06,724: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 18:50:22,229: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 18:50:23,980: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 18:50:53,936: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 18:50:54,963: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 18:51:45,943: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 18:51:49,834: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 18:52:35,825: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 18:52:37,662: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 18:54:14,489: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 18:54:17,103: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 18:54:36,006: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 18:54:37,455: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 18:55:44,419: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 18:55:45,806: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 18:59:27,108: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 18:59:28,517: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 19:01:09,558: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 19:01:11,101: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 19:02:09,894: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 19:02:11,066: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 19:08:04,757: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 19:08:05,478: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/AttributeError%3A%20%27str%27%20object%20has%20no%20attribute%20%27get%27?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 400 170
+2023-03-02 19:08:05,492: ERROR: Request error: 400 Client Error: Bad Request for url: https://rest.ensembl.org/vep/human/hgvs/AttributeError%3A%20%27str%27%20object%20has%20no%20attribute%20%27get%27?canonical=1;numbers=1;content-type=application/json
+2023-03-02 19:08:16,650: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 19:08:19,095: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 19:14:24,016: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 19:14:25,141: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 19:16:04,480: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 19:16:05,107: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/dict1%20%3D%20%7B%7D?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 400 96
+2023-03-02 19:16:05,109: ERROR: Request error: 400 Client Error: Bad Request for url: https://rest.ensembl.org/vep/human/hgvs/dict1%20%3D%20%7B%7D?canonical=1;numbers=1;content-type=application/json
+2023-03-02 19:16:17,242: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 19:16:19,559: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 19:16:38,112: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 19:16:39,323: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 19:17:50,064: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 19:17:51,260: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 19:18:07,626: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 19:18:09,058: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 19:22:15,008: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 19:22:17,490: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 19:23:07,274: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 19:23:09,948: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 19:23:23,977: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 19:23:24,865: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 19:24:06,422: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 19:24:09,898: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 19:26:28,886: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 19:26:29,832: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/%20%20%20%20%20%20%20%20%20%20%20%20if%20not%20data%3A%20%20%23%20empty%20list%20or%20dictionary%20returned%20by%20API?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 400 170
+2023-03-02 19:26:29,836: ERROR: Request error: 400 Client Error: Bad Request for url: https://rest.ensembl.org/vep/human/hgvs/%20%20%20%20%20%20%20%20%20%20%20%20if%20not%20data%3A%20%20%23%20empty%20list%20or%20dictionary%20returned%20by%20API?canonical=1;numbers=1;content-type=application/json
+2023-03-02 19:26:40,640: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 19:26:42,937: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 19:40:24,855: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 19:40:25,694: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/%20%20%20%20%20%20%20%20for%20d%20in%20can_hnf4a_dict1%3A?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 400 124
+2023-03-02 19:40:25,697: ERROR: Request error: 400 Client Error: Bad Request for url: https://rest.ensembl.org/vep/human/hgvs/%20%20%20%20%20%20%20%20for%20d%20in%20can_hnf4a_dict1%3A?canonical=1;numbers=1;content-type=application/json
+2023-03-02 19:40:36,441: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 19:40:38,185: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 19:41:02,271: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 19:41:03,327: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 19:41:36,994: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 19:41:38,325: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 19:42:22,077: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 19:42:23,205: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 19:42:41,797: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 19:42:42,974: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 19:52:04,702: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 19:52:06,077: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/int%28d2.get%28%27cds_end%27%2C%200%29%29%20%3C%201258?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 400 138
+2023-03-02 19:52:06,180: ERROR: Request error: 400 Client Error: Bad Request for url: https://rest.ensembl.org/vep/human/hgvs/int%28d2.get%28%27cds_end%27%2C%200%29%29%20%3C%201258?canonical=1;numbers=1;content-type=application/json
+2023-03-02 19:52:28,224: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 19:52:29,977: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 19:53:27,951: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 19:53:32,409: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 20:03:52,370: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 20:03:54,337: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
+2023-03-02 20:06:05,438: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-02 20:06:07,309: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NM_175914.5%3Ac.48C%3EA?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 3271
