@@ -4,6 +4,7 @@ import logging
 import json
 
 
+
 logging.basicConfig(filename="logging.log", level=logging.DEBUG, format="%(asctime)s: %(levelname)s: %(message)s")
 
 
@@ -32,6 +33,7 @@ class Conseq:
 
         data = response.json()
         decoded_data = json.loads(json.dumps(data, indent=4 ))
+
         if not data:  # empty list or dictionary returned by API
             logging.warning('No data returned by API')
             return None
@@ -61,4 +63,52 @@ while not is_complete:
     except Exception as e:
         logging.error(f"Error occurred: {e}")
         print(f"Error occurred: {e}")
+
+server_2 = "https://rest.variantvalidator.org/"
+ext_2 = f"https://rest.variantvalidator.org/VariantValidator/variantvalidator/GRCh38/{variant_id}/mane_select"
+headers = {"Content-Type": "application/json"}
+
+try:
+    response_2 = requests.get(ext_2, headers=headers)
+    decoded_2 = json.loads(response_2.content.decode())
+except requests.exceptions.RequestException as e:
+    logging.error(f'Request error: {e}')
+    raise requests.exceptions.RequestException(f'Request error: {e}')
+
+def show_indices(obj, indices):
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            if k in ('gene_symbol', 'mane_select', 'tlr', 'end_exon', 'start_exon'):
+                yield indices + [k], v
+            elif isinstance(v, (dict, list)):
+                yield from show_indices(v, indices + [k])
+    elif isinstance(obj, list):
+        for i, v in enumerate(obj):
+            if isinstance(v, (dict, list)):
+                yield from show_indices(v, indices + [i])
+
+for keys, v in show_indices(decoded_2, []):
+    #print(keys, v)
+    if 'gene_symbol' in keys:
+        print("This gene is " + v)
+    if 'mane_select' in keys:
+        print('Is this transcript the mane select transcript? ' + str(v))
+    if 'tlr' in keys:
+        print('The protein change is ' + v)
+   # if 'end_exon' in keys:    print('end exon: ' + str(v))<< keeping this on hold
+    if 'start_exon' in keys:
+        exon_number= v
+
+#if (most_severe_consequence== 'stop_gained') and (exon_number=='3'):
+#print("This variant is PVS1")
+
+
+
+
+
+
+
+
+
+
 
