@@ -39,7 +39,7 @@ class Conseq:
         data = response.json()
         decoded_data = json.loads(json.dumps(data, indent=4))
         decoded_1 = decoded_data[0].get('transcript_consequences')
-        #print(decoded_1)
+        print(decoded_1)
         if not data:  # empty list or dictionary returned by API
             logging.warning('No data returned by API')
             return None
