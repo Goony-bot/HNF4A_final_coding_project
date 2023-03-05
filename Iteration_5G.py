@@ -41,6 +41,8 @@ class Conseq:
             return None
 
         return most_severe_consequence
+        cds_end = data[0].get("cds_end")
+        exon_number= data[0].get()
 
 
 is_complete = False

@@ -11,7 +11,7 @@ logging.basicConfig(filename="logging.log", level=logging.DEBUG, format="%(ascti
 class Conseq:
     def get_most_severe_consequence(self, variant_id):
         server = "https://rest.ensembl.org"
-        endpoint = f"/vep/human/hgvs/{variant_id}"
+        endpoint = f"/vep/human/hgvs/{variant_id}?canonical=1;numbers=1;content-type=application/json"
         headers = {"Content-Type": "application/json"}
 
         try:
@@ -34,15 +34,39 @@ class Conseq:
         data = response.json()
         decoded_data = json.loads(json.dumps(data, indent=4 ))
 
-        if not data:  # empty list or dictionary returned by API
+        print(decoded_data)
+
+        if not data or not data[0]:  # empty list or dictionary returned by API
             logging.warning('No data returned by API')
             return None
+
         most_severe_consequence = data[0].get("most_severe_consequence")
+        print(most_severe_consequence)
+
         if not most_severe_consequence:  # most_severe_consequence not found in API response
             logging.warning('No most_severe_consequence found in API response')
             return None
+        for item in data[0]['transcript_consequences']:
+            if 'cds_end' in item and 'exon' in item:
+
+                #cds = data[0]['transcript_consequences'][0]['cds_end']
+
+                cds_int = int(item['cds_end'])
+
+
+                #exon = data[0]['transcript_consequences'][0]['exon']
+                exon_split = int(item['exon'].split('/')[0])
+                print(exon_split)
+                break
+
 
         return most_severe_consequence
+
+
+
+
+
+
 
 
 is_complete = False
@@ -53,7 +77,7 @@ while not is_complete:
     conseq = Conseq()
 
     try:
-        most_severe_consequence = conseq.get_most_severe_consequence(variant_id)
+        most_severe_consequence= conseq.get_most_severe_consequence(variant_id)
         if most_severe_consequence:
             logging.info(f'Most severe consequence: {most_severe_consequence}')
             print(f"This variant leads to: {most_severe_consequence}")
@@ -61,8 +85,8 @@ while not is_complete:
         else:
             print("No most severe consequence found for the given variant ID")
     except Exception as e:
-        logging.error(f"Error occurred: {e}")
-        print(f"Error occurred: {e}")
+            logging.error(f"Error occurred: {e}")
+            print(f"Error occurred: {e}")
 
 server_2 = "https://rest.variantvalidator.org/"
 ext_2 = f"https://rest.variantvalidator.org/VariantValidator/variantvalidator/GRCh38/{variant_id}/mane_select"
@@ -71,6 +95,7 @@ headers = {"Content-Type": "application/json"}
 try:
     response_2 = requests.get(ext_2, headers=headers)
     decoded_2 = json.loads(response_2.content.decode())
+    #print(decoded_2)
 except requests.exceptions.RequestException as e:
     logging.error(f'Request error: {e}')
     raise requests.exceptions.RequestException(f'Request error: {e}')
@@ -97,10 +122,9 @@ for keys, v in show_indices(decoded_2, []):
         print('The protein change is ' + v)
    # if 'end_exon' in keys:    print('end exon: ' + str(v))<< keeping this on hold
     if 'start_exon' in keys:
-        exon_number= v
+        exon_number = v
+        print(exon_number)
 
-#if (most_severe_consequence== 'stop_gained') and (exon_number=='3'):
-#print("This variant is PVS1")
 
 
 
