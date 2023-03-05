@@ -54,8 +54,9 @@ class Conseq:  # this is our main function
         for item in data[0]['transcript_consequences']:
             if 'cds_end' in item and 'exon' in item:
                 cds_int = int(item['cds_end'])
+                print(f'The CDS_END for this variant is: ', {cds_int})
                 exon_split = int(item['exon'].split('/')[0])
-                print(exon_split)
+                print(f"This variant occurs in", {exon_split})
                 break
         # defining the PVS1 criteria, we use an IF OR statement to set the PVS1 criteria for the HNF4A gene
         if most_severe_consequence == 'stop_gained' or most_severe_consequence == 'frameshift_variant':
@@ -136,4 +137,4 @@ for keys, v in show_indices(decoded_2, []):
     # if 'end_exon' in keys:    print('end exon: ' + str(v))<< keeping this on hold
     if 'start_exon' in keys:
         exon_number = v
-        print(exon_number)
+
