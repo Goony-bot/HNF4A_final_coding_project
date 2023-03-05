@@ -1648,3 +1648,20 @@ Request URL : https://rest.ensembl.org/vep/human/hgvs/0316673:c.281_282
 2023-03-05 12:21:40,056: INFO: Most severe consequence: missense_variant
 2023-03-05 12:21:40,059: DEBUG: Starting new HTTPS connection (1): rest.variantvalidator.org:443
 2023-03-05 12:21:46,431: DEBUG: https://rest.variantvalidator.org:443 "GET /VariantValidator/variantvalidator/GRCh38/NC_000020.11:g.44406195C%3ET/mane_select HTTP/1.1" 200 4431
+2023-03-05 12:26:30,115: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-05 12:26:31,716: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NC_000020.11:g.44406195C%3ET?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 9738
+2023-03-05 12:26:31,723: INFO: Most severe consequence: missense_variant
+2023-03-05 12:26:31,726: DEBUG: Starting new HTTPS connection (1): rest.variantvalidator.org:443
+2023-03-05 12:26:37,925: DEBUG: https://rest.variantvalidator.org:443 "GET /VariantValidator/variantvalidator/GRCh38/NC_000020.11:g.44406195C%3ET/mane_select HTTP/1.1" 200 4431
+2023-03-05 12:28:27,527: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-05 12:28:29,363: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NC_000020.11:g.44406195C%3ET?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 9738
+2023-03-05 12:28:29,369: INFO: Most severe consequence: missense_variant
+2023-03-05 12:28:29,372: DEBUG: Starting new HTTPS connection (1): rest.variantvalidator.org:443
+2023-03-05 12:28:35,757: DEBUG: https://rest.variantvalidator.org:443 "GET /VariantValidator/variantvalidator/GRCh38/NC_000020.11:g.44406195C%3ET/mane_select HTTP/1.1" 200 4431
+2023-03-05 12:32:53,577: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-05 12:32:56,545: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NC_000017.11:g.43104153del?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 12139
+2023-03-05 12:33:26,461: DEBUG: Starting new HTTPS connection (1): rest.ensembl.org:443
+2023-03-05 12:33:27,578: DEBUG: https://rest.ensembl.org:443 "GET /vep/human/hgvs/NC_000020.11:g.44406195C%3ET?canonical=1;numbers=1;content-type=application/json HTTP/1.1" 200 9738
+2023-03-05 12:33:27,586: INFO: Most severe consequence: missense_variant
+2023-03-05 12:33:27,590: DEBUG: Starting new HTTPS connection (1): rest.variantvalidator.org:443
+2023-03-05 12:33:34,111: DEBUG: https://rest.variantvalidator.org:443 "GET /VariantValidator/variantvalidator/GRCh38/NC_000020.11:g.44406195C%3ET/mane_select HTTP/1.1" 200 4431

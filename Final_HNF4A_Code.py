@@ -37,7 +37,7 @@ class Conseq:  # this is our main function
         data = response.json()
         decoded_data = json.loads(json.dumps(data, indent=4))
 
-        # print(decoded_data) <this code is important during testing
+        # print(decoded_data)<this code is important during testing
 
         if not data or not data[0]:  # empty list or dictionary returned by API then log warning
             logging.warning('No data returned by API')
@@ -52,22 +52,27 @@ class Conseq:  # this is our main function
         # here we are using a forloop that allows us to look into the returned json file and extract cds_end and exon #
         # we use a break to get the first exon number and cds_end in the list
         for item in data[0]['transcript_consequences']:
-            if 'cds_end' in item and 'exon' in item:
+            if 'cds_end' in item and 'exon' in item and 'gene_symbol' in item:
                 cds_int = int(item['cds_end'])
                 print(f'The CDS_END for this variant is: ', {cds_int})
                 exon_split = int(item['exon'].split('/')[0])
                 print(f"This variant occurs in exon ", {exon_split})
+                gene_symbol= str(item['gene_symbol'])
+                print(gene_symbol)
                 break
-        # defining the PVS1 criteria, we use an IF OR statement to set the PVS1 criteria for the HNF4A gene
-        if most_severe_consequence == 'stop_gained' or most_severe_consequence == 'frameshift_variant':
-            if exon_split < 10 and cds_int < 1258:
-                print("This variant meets the PVS1 criteria at a very strong level")
-            elif exon_split == 10 and cds_int in range(1258, 3180):
-                print("This variant meets the PVS1 criteria at a supporting level")
+        if gene_symbol != 'HNF4A':
+            print(" Sorry this code is only for HNF4A")
+            return
+        else: # defining the PVS1 criteria, we use an IF OR statement to set the PVS1 criteria for the HNF4A gene
+            if most_severe_consequence == 'stop_gained' or most_severe_consequence == 'frameshift_variant':
+                if exon_split < 10 and cds_int < 1258:
+                    print("This variant meets the PVS1 criteria at a very strong level")
+                elif exon_split == 10 and cds_int in range(1258, 3180):
+                    print("This variant meets the PVS1 criteria at a supporting level")
+                else:
+                    print("This variant does not meet PVS criteria")
             else:
                 print("This variant does not meet PVS criteria")
-        else:
-            print("This variant does not meet PVS criteria")
 
         return most_severe_consequence
 
