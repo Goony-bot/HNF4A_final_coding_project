@@ -47,17 +47,17 @@ If you do not have access, the code will not work as intended. This code will wo
 described **in HGVS format and GRCh38.** 
 
 ## **Output template**
-The CDS_END for this variant is:  {<cds_end>}
+The CDS_END for this variant is:  _cds_end_
 
-This variant occurs in {<exon>}
+This variant occurs in exon: _exon_
 
- <gene_symbol>
+ _gene_symbol_
 
-This variant does not meet PVS criteria / 
-This variant meets the PVS1 criteria at a very strong level /
-This variant meets the PVS1 criteria at a supporting level
+_This variant does not meet PVS criteria_ / 
+_This variant meets the PVS1 criteria at a very strong level_ /
+_This variant meets the PVS1 criteria at a supporting level_
 
-This variant leads to: <consequence_type>
+This variant leads to: _consequence_type_
 
 ## **Code testing and validation**
   
